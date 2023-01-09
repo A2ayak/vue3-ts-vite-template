@@ -1,2 +1,1 @@
-# vue3-ts-vite-template
-vite + vue@3.2.37 + ts （for azayak-cli）
+# Vue 3 + Vite + TypeScript （template for azayak-cli）
