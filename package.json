@@ -4,9 +4,12 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"dev": "vite --host",
-		"dev:test": "vite --host --mode test",
+		"dev": "vite",
+		"dev:theme": "vite --mode theme",
 		"build": "vue-tsc --noEmit && vite build",
+		"build:simple": "vite build",
+		"build:theme": "vue-tsc --noEmit && vite build --mode theme",
+		"build:theme-simple": "vite build --mode theme",
 		"preview": "vite preview"
 	},
 	"dependencies": {

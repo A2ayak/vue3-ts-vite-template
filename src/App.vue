@@ -4,7 +4,7 @@
 	<router-link to="/">首页</router-link>
 	<router-link to="/home">Home</router-link>
 	<a-button type="primary">asldkj</a-button>
-	<span>teasasldkj</span>
+	<div class="empty-color"></div>
 	<router-view></router-view>
 </template>
 

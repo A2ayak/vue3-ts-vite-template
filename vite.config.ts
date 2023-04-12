@@ -11,18 +11,21 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
-	loadEnv(mode, process.cwd()) // 加载环境变量
+	const { VITE_APP_NAME } = loadEnv(mode, process.cwd()) // 加载环境变量
+	console.log('当前模式', mode)
+
 	return {
 		// base: VITE_APP_NAME,
-		// server: {
-		//   host: true,
-		//   proxy: {
-		//     '/api': {
-		//       target: 'http://192.168.1.1',
-		//       changeOrigin: true
-		//     }
-		//   }
-		// },
+		server: {
+			host: true,
+			port: 8080,
+			// proxy: {
+			//   '/api': {
+			//     target: 'http://192.168.1.1',
+			//     changeOrigin: true
+			//   }
+			// }
+		},
 		plugins: [
 			vue(),
 			vueJsx(),
@@ -54,6 +57,7 @@ export default defineConfig(({ command, mode }) => {
 				less: {
 					modifyVars: generateThemeVars(mode),
 					javascriptEnabled: true,
+					additionalData: mode === 'theme' ? '@import "@/style/otherTheme.less";' : '',
 				},
 			},
 		},

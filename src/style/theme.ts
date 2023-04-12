@@ -1,10 +1,8 @@
 // import { resolve } from "path"
 
-console.log(import.meta.env)
-
-export function generateThemeVars(mode) {
+export function generateThemeVars(mode: string) {
 	switch (mode) {
-		case 'test': {
+		case 'theme': {
 			return {
 				'primary-color': '#C3916A',
 			}
