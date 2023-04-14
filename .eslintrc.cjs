@@ -5,7 +5,7 @@ module.exports = {
 		node: true,
 	},
 	extends: [
-		'eslint:recommended',
+		// 'eslint:recommended', // 开启这个会不识别typescript的全局变量
 		'plugin:vue/essential',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:vue/vue3-recommended', // 使用插件支持vue3
@@ -31,4 +31,8 @@ module.exports = {
 		'@typescript-eslint/no-explicit-any': 'off', // 允许ts使用any
 		'vue/no-multiple-template-root': 'off',
 	},
+	// 全局未声明变量、types放这
+	// globals: {
+	// 	Nullable: true,
+	// },
 }

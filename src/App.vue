@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const test: Nullable<string> = 'asdasd'
+</script>
 
 <template>
 	<router-link to="/">首页</router-link>
